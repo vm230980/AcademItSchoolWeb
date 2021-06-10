@@ -1,39 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Страница 1</title>
 </head>
+
 <body>
-<h1 id="page1tart">Страница 1</h1>
+<h1 id="page1start">Страница 1</h1>
+
 <form action="/handler.php" method="post">
     <label for="textField1">Текстовое поле ввода:</label>
     <br/>
+
     <input type="text" id="textField1" name="textField1" placeholder="Введите текст"/>
     <br/>
     <br/>
+
     <label>Многострочное поле ввода:
         <br/>
         <textarea name="multipleTextField1" placeholder="Введите текст"></textarea>
         <br/>
     </label>
+
     <p>Чекбокс:</p>
+
     <label>
-        Чекбокс 1<input type="checkbox" name="checkbox1"/>
+        <input type="checkbox" name="checkbox1"/>Чекбокс 1
     </label>
+
     <p>Радиобаттоны:</p>
+
     <label>
         <input type="radio" value="1" checked="checked" name="radio1"/>Опция 1
     </label>
     <br/>
+
     <label>
         <input type="radio" value="2" name="radio1"/>Опция 2
     </label>
     <br/>
+
     <label>
         <input type="radio" value="3" name="radio1"/>Опция 3
     </label>
+
     <p>Выпадающий список с единичным выбором:</p>
+
     <label>
         <select name="select1">
             <option>Пункт 1</option>
@@ -41,8 +53,10 @@
             <option>Пункт 3</option>
         </select>
     </label>
+
     <p>Список с множественным выбором:</p>
     <label>
+
         <select multiple="multiple" name="multipleSelect1">
             <option value="1">Пункт 1</option>
             <option value="2">Пункт 2</option>
@@ -52,13 +66,17 @@
             <option value="6">Пункт 6</option>
         </select>
     </label>
+
     <p>Кнопка:</p>
+
     <button type="submit">Отправить</button>
 </form>
 <br/><br/>
+
 <p>
-    <a href="#page1tart">Наверх</a>
+    <a href="#page1start">Наверх</a>
 </p>
+
 <a href="index2.html" target="_blank">Страница 2</a>
 </body>
 </html>
