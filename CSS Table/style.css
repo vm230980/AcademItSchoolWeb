@@ -1,0 +1,55 @@
+.box1 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    background-color: white;
+    color: black;
+    font-size: 19px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.table1 {
+    max-width: 860px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+.tableHead {
+    background-color: #3598DB;
+    color: white;
+}
+
+.column {
+    text-align: left;
+    border: 2px solid #D1D1D1;
+    padding: 15px 15px 15px 10px;
+}
+
+.col1 {
+    width: 175px;
+}
+
+.col2 {
+    width: 175px;
+}
+
+.col3 {
+    width: 310px;
+}
+
+.col4 {
+    width: 200px;
+}
+
+.row {
+    border: 2px solid #D1D1D1;
+}
+
+.evenRow {
+    background-color: #FFFFFF;
+}
+
+.oddRow {
+    background-color: #EEEEEE;
+}

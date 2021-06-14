@@ -6,6 +6,7 @@
     box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
+
 .main-div {
     margin: auto;
     background-color: #FEEED6;
@@ -13,26 +14,31 @@
     max-width: 848px;
     font-weight: normal;
 }
-.header{
+
+.header {
     text-transform: uppercase;
     margin: 10px;
     font-weight: 100;
 }
-.p-text{
+
+.p-text {
     text-indent: 25px;
     margin: 10px;
     line-height: 1.5
 }
-.condition-div{
+
+.condition-div {
     margin-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.condition-text{
+
+.condition-text {
     margin-left: 10px;
     font-weight: bold;
     color: #378DB3;
 }
-.strikethrough-text{
+
+.strikethrough-text {
     text-decoration: line-through;
 }
