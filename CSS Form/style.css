@@ -1,0 +1,64 @@
+.root {
+    font-family: "Verdanda", sans-serif;
+    background-color: white;
+    color: #98918B;
+    font-size: 15px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.header {
+    margin: 0 0 0 235px;
+    color: #67656B;
+    font-weight: 100;
+    font-size: 2em;
+}
+
+.my-form {
+    margin: auto;
+    background-color: #FEEED6;
+    box-sizing: border-box;
+    max-width: 843px;
+    font-weight: normal;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.my-div {
+    display: inline-block;
+    font-weight: bold;
+    color: #676565;
+    margin-bottom: 10px;
+}
+
+.my-input {
+    padding: 10px;
+    border-style: none;
+    width: 783px;
+    margin-bottom: 20px;
+}
+
+.my-input::placeholder {
+    opacity: 70%;
+}
+
+.my-text-area::placeholder {
+    opacity: 70%;
+}
+
+.my-text-area {
+    padding: 10px;
+    border-style: none;
+    width: 783px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.my-button {
+    float: right;
+    font-weight: bold;
+    background-color: #378DB2;
+    border: none;
+    color: #FFF;
+    padding: 10px;
+}
