@@ -1,4 +1,4 @@
-.root {
+body {
     font-family: "Open Sans", serif;
     font-weight: 500;
     background-color: #FFF;
@@ -14,32 +14,32 @@
     text-align: left;
 }
 
-th, td {
+.my-table th, td {
     padding: 15px;
     border: 1px solid #D1D1D1;
 }
 
-thead {
+.my-table thead {
     background-color: #3598DB;
     color: #FFF;
 }
 
-tbody > tr:nth-child(odd) {
+.my-table tbody tr:nth-child(odd) {
     background-color: #EEE;
 }
 
-.column1 {
+.first-name {
     width: 175px;
 }
 
-.column2 {
+.last-name {
     width: 175px;
 }
 
-.column3 {
+.job-title {
     width: 310px;
 }
 
-.column4 {
+.twitter {
     width: 200px;
 }
