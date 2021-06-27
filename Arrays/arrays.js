@@ -21,6 +21,15 @@ function sliceLastFive(array) {
 
 console.log("Подмассив 2 из последних пяти элементов массива 2: " + sliceLastFive(array1));
 
+function evenNumbersSum(array) {
+    return array.reduce((res, item, index) => {
+        if (item % 2 === 0) res += item;
+        return res;
+    }, 0);
+}
+
+console.log("Сумма элементов массива 1, которые являются четными числами: " + evenNumbersSum(array1));
+
 var array2 = [];
 
 for (var i = 1; i < 101; i++) {
