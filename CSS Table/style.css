@@ -1,5 +1,5 @@
 body {
-    font-family: "Open Sans", serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 500;
     background-color: #FFF;
     font-size: 19px;
@@ -14,7 +14,7 @@ body {
     text-align: left;
 }
 
-.my-table th, td {
+.my-table th, .my-table td {
     padding: 15px;
     border: 1px solid #D1D1D1;
 }
