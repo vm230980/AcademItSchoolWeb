@@ -24,15 +24,7 @@
 
     function getEvenNumbersSum(array) {
         return array.reduce(function (res, item) {
-            var sum;
-
-            sum = res;
-
-            if (item % 2 === 0) {
-                sum += item;
-            }
-
-            return sum;
+            return item % 2 === 0 ? res + item : res;
         }, 0);
     }
 
@@ -49,10 +41,9 @@
     function getSquaredEvenNumbers(array) {
         return array.filter(function (item) {
             return item % 2 === 0;
-        })
-            .map(function (item) {
-                return item * item;
-            });
+        }).map(function (item) {
+            return item * item;
+        });
     }
 
     console.log("Массив квадратов четных чисел из массива 2: " + getSquaredEvenNumbers(array2));
