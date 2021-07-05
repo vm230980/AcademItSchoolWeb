@@ -1,65 +1,72 @@
-.root {
+body {
     font-family: "Verdanda", sans-serif;
-    background-color: white;
+    background-color: #FFF;
     color: #98918B;
     font-size: 15px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
 
+.main-div {
+    margin: auto;
+    max-width: 843px;
+}
+
 .header {
-    margin: 0 0 0 235px;
+    margin: auto;
     color: #67656B;
     font-weight: 100;
     font-size: 2em;
 }
 
-.my-form {
-    margin: auto;
+.request-form {
     background-color: #FEEED6;
-    box-sizing: border-box;
-    max-width: 843px;
     font-weight: normal;
     padding: 20px;
     overflow: hidden;
 }
 
-.my-label {
+.input-label {
     display: inline-block;
     font-weight: bold;
     color: #676565;
     margin-bottom: 10px;
 }
 
-.my-input {
+.text-input {
     padding: 10px;
     border-style: none;
-
-    width: 783px;
+    width: 97%;
     margin-bottom: 20px;
 }
 
-.my-input::placeholder {
-    opacity: 70%;
+.text-input::placeholder {
+    color: #999999;
 }
 
-.my-text-area::placeholder {
-    opacity: 70%;
+.comment-text-area::placeholder {
+    color: #999999;
 }
 
-.my-text-area {
+.comment-text-area {
     padding: 10px;
     border-style: none;
-    width: 783px;
+    width: 97%;
     height: 100px;
     margin-bottom: 20px;
+    resize: vertical;
 }
 
-.my-button {
+.send-button {
     float: right;
     font-weight: bold;
     background-color: #378DB2;
     border: none;
     color: #FFF;
     padding: 10px;
+}
+
+.send-button:hover {
+    background-color: #32728D;
+    cursor: pointer;
 }
