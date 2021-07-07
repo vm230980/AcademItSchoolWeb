@@ -7,25 +7,25 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<div class="main-div">
+<div class="main-container">
     <h1 class="header">Отправить заявку</h1>
     <form action="/handler.php" method="post" class="request-form">
-        <label for="name-text-field" class="input-label">Ваше имя</label>
+        <label for="name-text-field" class="text-input-label">Ваше имя</label>
         <input class="text-input" type="text" id="name-text-field" name="nameTextField" placeholder="Ваше имя *"/>
 
-        <label for="phone-text-field" class="input-label">Ваш номер телефона</label>
+        <label for="phone-text-field" class="text-input-label">Ваш номер телефона</label>
         <input class="text-input" type="text" id="phone-text-field" name="phoneTextField"
                placeholder="Ваш номер телефона *"/>
 
-        <label for="email-text-field" class="input-label">Ваш email или VK</label>
+        <label for="email-text-field" class="text-input-label">Ваш email или VK</label>
         <input class="text-input" type="text" id="email-text-field" name="emailTextField"
                placeholder="Ваш email или VK *"/>
 
-        <label for="comment-text-field" class="input-label">Комментарий</label>
+        <label for="comment-text-field" class="text-input-label">Комментарий</label>
         <textarea class="comment-text-area" id="comment-text-field" name="commentTextField"
                   placeholder="Комментарий (не обязательно)"></textarea>
 
-        <div>Заполните и отправьте форму, и мы перезвоним Вам по указанному номеру</div>
+        <div class="info-text">Заполните и отправьте форму, и мы перезвоним Вам по указанному номеру</div>
 
         <button type="submit" class="send-button">Отправить заявку</button>
     </form>

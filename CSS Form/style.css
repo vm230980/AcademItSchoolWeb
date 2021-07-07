@@ -1,19 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Verdanda", sans-serif;
     background-color: #FFF;
     color: #98918B;
     font-size: 15px;
-    box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
 
-.main-div {
+.main-container {
     margin: auto;
-    max-width: 843px;
+    max-width: 844px;
 }
 
 .header {
-    margin: auto;
+    margin: 0 0 0 20px;
     color: #67656B;
     font-weight: 100;
     font-size: 2em;
@@ -22,11 +25,11 @@ body {
 .request-form {
     background-color: #FEEED6;
     font-weight: normal;
-    padding: 20px;
+    padding: 21px;
     overflow: hidden;
 }
 
-.input-label {
+.text-input-label {
     display: inline-block;
     font-weight: bold;
     color: #676565;
@@ -52,7 +55,7 @@ body {
     padding: 10px;
     border-style: none;
     width: 100%;
-    height: 100px;
+    height: 130px;
     margin-bottom: 20px;
     resize: vertical;
 }
@@ -64,9 +67,15 @@ body {
     border: none;
     color: #FFF;
     padding: 10px;
+    width: 170px;
+    height: 39px;
 }
 
 .send-button:hover {
     background-color: #32728D;
     cursor: pointer;
+}
+
+.info-text {
+    margin-bottom: 10px;
 }
