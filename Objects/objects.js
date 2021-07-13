@@ -1,71 +1,75 @@
 (function () {
-    var countries = [];
-
-    countries.push({
-        name: "Russia",
-        cities: [{cityName: "Moscow", population: "12506468"},
-            {cityName: "Kaluga", population: "328871"},
-            {cityName: "Omsk", population: "1139897"},
-            {cityName: "Saratov", population: "838321"},
-            {cityName: "Barnaul", population: "631124"},
-            {cityName: "Sochi", population: "364171"},
-            {cityName: "Tumen", population: "816800"}
-        ]
-    });
-
-    countries.push({
-        name: "Kazakhstan",
-        cities: [{cityName: "Nūr-Sūltan", population: "1002000"},
-            {cityName: "Almaty", population: "1777000"},
-            {cityName: "Semey", population: "320397"},
-            {cityName: "Oskemen", population: "346127"},
-            {cityName: "Ridder", population: "48008"},
-            {cityName: "Shymkent", population: "1074167"}
-        ]
-    });
-
-    countries.push({
+    var countries = [{
         name: "Latvia",
-        cities: [{cityName: "Riga", population: "725000"},
-            {cityName: "Jurmala", population: "50428"},
-            {cityName: "Daugavpils", population: "80627"},
-            {cityName: "Ventspils", population: "34377"},
+        cities: [
+            {name: "Riga", population: "725000"},
+            {name: "Jurmala", population: "50428"},
+            {name: "Daugavpils", population: "80627"},
+            {name: "Ventspils", population: "34377"},
         ]
-    });
-
-    countries.push({
-        name: "Czech Republic",
-        cities: [{cityName: "Prague", population: "1301132"},
-            {cityName: "Brno", population: "379526"},
-            {cityName: "Pilsen", population: "175219"},
-            {cityName: "Karlovy Vary", population: "48319"},
+    }, {
+        name: "Kazakhstan",
+        cities: [
+            {name: "Nūr-Sūltan", population: "1002000"},
+            {name: "Almaty", population: "1777000"},
+            {name: "Semey", population: "320397"},
+            {name: "Oskemen", population: "346127"},
+            {name: "Ridder", population: "48008"},
+            {name: "Shymkent", population: "1074167"}
         ]
-    });
-
-    countries.push({
-        name: "United States Of America",
-        cities: [{cityName: "Washington", population: "5400000"},
-            {cityName: "New York City", population: "8253213"},
-            {cityName: "Chicago", population: "2710000"},
-            {cityName: "Denver", population: "2697476"},
-            {cityName: "Boston", population: "4628910"},
-            {cityName: "Seattle", population: "744955"},
-            {cityName: "Detroit", population: "681090"}
-        ]
-    });
+    },
+        {
+            name: "Russia",
+            cities: [
+                {name: "Moscow", population: "12506468"},
+                {name: "Kaluga", population: "328871"},
+                {name: "Omsk", population: "1139897"},
+                {name: "Saratov", population: "838321"},
+                {name: "Barnaul", population: "631124"},
+                {name: "Sochi", population: "364171"},
+                {name: "Tumen", population: "816800"}
+            ]
+        },
+        {
+            name: "Czech Republic",
+            cities: [
+                {name: "Prague", population: "1301132"},
+                {name: "Brno", population: "379526"},
+                {name: "Pilsen", population: "175219"},
+                {name: "Karlovy Vary", population: "48319"},
+            ]
+        },
+        {
+            name: "United States Of America",
+            cities: [
+                {name: "Washington", population: "5400000"},
+                {name: "New York City", population: "8253213"},
+                {name: "Chicago", population: "2710000"},
+                {name: "Denver", population: "2697476"},
+                {name: "Boston", population: "4628910"},
+                {name: "Seattle", population: "744955"},
+                {name: "Detroit", population: "681090"}
+            ]
+        }];
 
     console.log("Страны: \n");
-    countries.forEach(function (item) {
-        console.log(item.name + "\n");
+    countries.forEach(function (country) {
+        console.log(country.name + "\n");
     });
 
     function getMaxCitiesNumberCountriesList(countries) {
-        return countries.sort(function (a, b) {
-            return b.cities.length - a.cities.length;
-        }).filter(function (item) {
-            if (item.cities.length === countries[0].cities.length) {
-                return item;
+        var maxCitiesNumber = countries[0].cities.length;
+
+        maxCitiesNumber = countries.reduce(function (res, country) {
+            if (country.cities.length >= maxCitiesNumber) {
+                maxCitiesNumber = country.cities.length;
             }
+
+            return maxCitiesNumber;
+        }, 0);
+
+        return countries.filter(function (country) {
+            return country.cities.length === maxCitiesNumber;
         });
     }
 
@@ -73,32 +77,19 @@
 
     console.log("Страны с максимальным количеством городов: \n");
 
-    maxCitiesNumberCountriesList.forEach(function (item) {
-        console.log(item.name + "\n");
+    maxCitiesNumberCountriesList.forEach(function (country) {
+        console.log(country.name + "\n");
     });
 
     function getCountriesAndPopulationsAsObject(countries) {
-        var countriesAndPopulationsArray = countries.map(function (item) {
-            var countryAndPopulation = {};
-
-            countryAndPopulation.name = item.name;
-            countryAndPopulation.population = item.cities.map(function (item) {
-                return item.population
-            }).reduce(function (res, item) {
-                var sum = res;
-
-                sum += parseInt(item);
-
-                return sum;
-            }, 0);
-
-            return countryAndPopulation;
-        });
-
         var countriesAndPopulationsObject = {};
 
-        countriesAndPopulationsArray.forEach(function (item) {
-            countriesAndPopulationsObject[item.name] = item.population;
+        countries.forEach(function (country) {
+            countriesAndPopulationsObject[country.name] = country.cities.map(function (city) {
+                return city.population;
+            }).reduce(function (res, item) {
+                return res + +item;
+            }, 0);
         });
 
         return countriesAndPopulationsObject;
