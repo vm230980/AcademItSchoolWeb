@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Перевод температур</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="main-container">
+    <h1 class="main-header">Перевод температур</h1>
+    <div class="input-container">
+        <label>Введите значение в градусах Цельсия:
+            <input type="number" class="input-text-field" id="celsiusInputTextField" name="celsiusInputTextField">
+        </label>
+    </div>
+    <div>
+        <label class="result-label">Значение температуры в градусах Фаренгейта: <input class="result-text-field"
+                                                                                       id="fahrenheitOutputTextField"
+                                                                                       readonly></label>
+    </div>
+    <div>
+        <label class="result-label">Значение температуры в градусах Кельвина: <input class="result-text-field"
+                                                                                     id="kelvinOutputTextField"
+                                                                                     readonly></label>
+    </div>
+    <div class="div-for-button">
+        <button type="button" class="convert-button" id="convertButton">Перевести</button>
+    </div>
+</div>
+</body>
+</html>
