@@ -58,6 +58,11 @@ body {
     cursor: pointer;
 }
 
-.div-for-button {
+.button-wrapper {
     text-align: center;
+}
+
+.error-message {
+    color: #f00;
+    font-size: 0.8rem;
 }
