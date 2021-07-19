@@ -6,7 +6,7 @@
                 {name: "Riga", population: 725000},
                 {name: "Jurmala", population: 50428},
                 {name: "Daugavpils", population: 80627},
-                {name: "Ventspils", population: 34377},
+                {name: "Ventspils", population: 34377}
             ]
         }, {
             name: "Kazakhstan",
@@ -35,7 +35,7 @@
                 {name: "Prague", population: 1301132},
                 {name: "Brno", population: 379526},
                 {name: "Pilsen", population: 175219},
-                {name: "Karlovy Vary", population: 48319},
+                {name: "Karlovy Vary", population: 48319}
             ]
         }, {
             name: "United States Of America",
@@ -57,17 +57,9 @@
     });
 
     function getMaxCitiesAmountCountriesList(countries) {
-        if (countries.length === 0) {
-            return [];
-        }
-
         var maxCitiesAmount = countries.reduce(function (res, country) {
-            if (country.cities.length > res) {
-                res = country.cities.length;
-            }
-
-            return res;
-        }, countries[0].cities.length);
+            return Math.max(country.cities.length, res);
+        }, 0);
 
         return countries.filter(function (country) {
             return country.cities.length === maxCitiesAmount;
