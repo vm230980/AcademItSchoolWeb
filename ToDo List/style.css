@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Trebuchet, sans-serif;
+}
+
+.main-container {
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    background-color: #3598DB;
+    padding: 10px;
+}
+
+.main-header {
+    margin: 10px 0 20px auto;
+    text-align: center;
+}
+
+.new-todo-text-field-wrapper {
+    margin-left: 10px;
+}
+
+.error-message {
+    color: #f00;
+    visibility: hidden;
+    margin: 5px 0 0 0;
+    font-size: 0.8em;
+}
+
+.todo-list button {
+    margin-left: 5px;
+}
+
+.todo-list li {
+    margin-bottom: 20px;
+}
+
+.edit-text::placeholder {
+    color: #f00;
+}
